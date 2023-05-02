@@ -31,7 +31,7 @@ SECRET_KEY = f"django-insecure-{os.environ.get('SECRET_KEY')}"
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['weather-app-production-33e0.up.railway.app']
+ALLOWED_HOSTS = "os.environ.get('DJANGO_ALLOWED_HOSTS', '').split(',')"
 
 
 # Application definition
