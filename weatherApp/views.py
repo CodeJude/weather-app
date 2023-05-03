@@ -21,9 +21,9 @@ def index(request):
             'daily_forecasts': daily_forecasts,
         }
 
-        return render(request, 'public/index.html', context)
+        return render(request, 'index.html', context)
     else:
-        return render(request, 'public/index.html')
+        return render(request, 'index.html')
 
 
 def fetch_weather_data(city, api_key, current_weather_url, forecast_url):
