@@ -9,7 +9,6 @@ from dotenv import load_dotenv
 load_dotenv()
 
 
-@ensure_csrf_cookie
 def index(request):
     api_key = os.getenv('API_KEY')
     current_weather_url = 'https://api.openweathermap.org/data/2.5/weather?q={}&appid={}'
