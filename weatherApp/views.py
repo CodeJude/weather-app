@@ -5,10 +5,12 @@ import datetime
 
 from django.views.decorators.csrf import ensure_csrf_cookie
 from dotenv import load_dotenv
+from django.views.decorators.csrf import ensure_csrf_cookie, csrf_exempt
 
 load_dotenv()
 
-
+@ensure_csrf_cookie
+@csrf_exempt
 def index(request):
     api_key = os.getenv('API_KEY')
     current_weather_url = 'https://api.openweathermap.org/data/2.5/weather?q={}&appid={}'
